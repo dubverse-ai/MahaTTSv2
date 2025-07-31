@@ -31,11 +31,57 @@ We are also open sourcing the ability to finetune on your own voice.
 
 
 
-<!-- ## Installation -->
-<!-- 
+## Installation
+
 ```bash
-pip install git+https://github.com/dubverse-ai/MahaTTSv2.git
-``` -->
+git lfs install
+git clone --recurse-submodules https://huggingface.co/Dubverse/MahaTTSv2
+pip install -r MahaTTSv2/requirements.txt
+```
+
+```bash
+import sys
+sys.path.append("MahaTTSv2/")
+import os
+import torch
+import subprocess
+from inference import infer, prepare_inputs, load_t2s_model, load_cfm, create_wav_header
+
+device = "cuda"# if torch.cuda.is_available() else "cpu"
+print("Using device", device)
+
+# Model checkpoints
+m1_checkpoint = "MahaTTSv2/pretrained_checkpoint/m1_gemma_benchmark_1_latest_weights.pt"
+m2_checkpoint = "MahaTTSv2/pretrained_checkpoint/m2.pt"
+vocoder_checkpoint = 'MahaTTSv2/pretrained_checkpoint/700_580k_multilingual_infer_ready/'
+
+global FM, vocoder, m2, mu, std, m1
+
+# Load models
+FM, vocoder, m2, mu, std = load_cfm(m2_checkpoint, vocoder_checkpoint, device)
+m1 = load_t2s_model(m1_checkpoint, device)
+
+
+def generate_audio(text, language):
+
+    ref_clips = [
+        'speakers/female1/train_hindifemale_02794.wav',
+        'speakers/female1/train_hindifemale_04167.wav',
+        'speakers/female1/train_hindifemale_02795.wav'
+        ]
+
+    text_ids, code_ids, language_code, ref_mels_m1, ref_mels_m2 = prepare_inputs(
+        text.lower(),
+        ref_clips_m1=ref_clips,
+        ref_clips_m2=ref_clips,
+        language=language,
+        device=device
+    )
+
+    audio_wav = infer(m1, m2, vocoder, FM, mu, std, text_ids, code_ids, language_code, ref_mels_m1, ref_mels_m2, device)
+    return 24000,audio_wav
+
+```
 
 
 ### Model Params
