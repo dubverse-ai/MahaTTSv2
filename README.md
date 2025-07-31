@@ -52,30 +52,28 @@ The following languages are currently supported:
 
 | Language         | Status |
 |------------------|:------:|
-| English (en)     | ✅     |
-| Hindi (in)       | ✅     |
 | Assamese (in)    | ✅     |
+| Bengali (in)     | ✅     |
+| Bhojpuri (in)    | ✅     |
+| Bodo (in)        | ✅     |
+| Dogri (in)       | ✅     |
+| Odia (in)        | ✅     |
+| English (en)     | ✅     |
+| French (fr)      | ✅     |
 | Gujarati (in)    | ✅     |
+| German (de)      | ✅     |
+| Hindi (in)       | ✅     |
+| Italian (it)     | ✅     |
+| Kannada (in)     | ✅     |
+| Malayalam (in)   | ✅     |
+| Marathi (in)     | ✅     |
 | Telugu (in)      | ✅     |
 | Punjabi (in)     | ✅     |
-| Marathi (in)     | ✅     |
-| Tamil (in)       | ✅     |
-| Bengali (in)     | ✅     |
-| Odia (in)        | ✅     |
-| Manipuri (in)    | ✅     |
-| Bhojpuri (in)    | ✅     |
-| Sanskrit (in)    | ✅     |
-| Bodo (in)        | ✅     |
-| Malayalam (in)   | ✅     |
-| Kannada (in)     | ✅     |
-| Dogri (in)       | ✅     |
 | Rajasthani (in)  | ✅     |
-| Thai (th)        | ✅     |
-| Japanese (ja)    | ✅     |
-| French (fr)      | ✅     |
-| German (de)      | ✅     |
-| Italian (it)     | ✅     |
+| Sanskrit (in)    | ✅     |
 | Spanish (es)     | ✅     |
+| Tamil (in)       | ✅     |
+| Telugu (in)      | ✅     |
 
 
 ## TODO:
