@@ -1,0 +1,6 @@
+[submodule "Semantic_tokens/seamless_communication"]
+	path = Semantic_tokens/seamless_communication
+	url = https://github.com/facebookresearch/seamless_communication.git
+[submodule "bigvgan_v2_24khz_100band_256x"]
+	path = bigvgan_v2_24khz_100band_256x
+	url = https://huggingface.co/nvidia/bigvgan_v2_24khz_100band_256x
