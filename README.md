@@ -10,7 +10,7 @@ a <a href = "https://black.dubverse.ai">Dubverse Black</a> initiative <br> <br>
 
 ------
 ## Description
-We introduce MahaTTS v2, a multi-speaker text-to-speech (TTS) system that has been trained on 50k hours of Indic and global languages. 
+We introduce [MahaTTS v2](https://arxiv.org/abs/2508.14049) (Paper), a multi-speaker text-to-speech (TTS) system that has been trained on 50k hours of Indic and global languages. 
 We have followed a text-to-semantic-to-acoustic approach, leveraging wav2vec2 tokens, this gives out-the-box generalization to unseen low-resourced languages. 
 We have open sourced the first version (MahaTTS), which was trained on English and Indic languages as two separate models on 9k and 400 hours of open source datasets. 
 In MahaTTS v2, we have collected over 20k+ hours of training data into a single multilingual cross-lingual model. 
@@ -137,3 +137,4 @@ MahaTTS is licensed under the Apache 2.0 License.
 - [BIGVGAN](https://github.com/NVIDIA/BigVGAN) out of the box vocoder
 - [Flow training](https://github.com/shivammehta25/Matcha-TTS) for training Flow model
 - [Huggingface](https://huggingface.co/docs/transformers/index) for related training and inference code
+
